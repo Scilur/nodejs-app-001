@@ -1,0 +1,11 @@
+exit
+db.grantRolesToUser('db_admin', [{ role: 'readWrite', db: 'nextjs_db' }])
+db.grantRolesToUser('db_admin', [{ role: 'dbAdmin', db: 'nextjs_db' }])
+db = db.getSiblingDB('nextjs_db')
+use admin
+use nextjs_db
+db.grantRolesToUser('db_admin', [{ role: 'readWrite', db: 'nextjs_db' }])
+db.grantRolesToUser('db_admin', [{ role: 'dbAdmin', db: 'nextjs_db' }])
+db = db.getSiblingDB('nextjs_db')
+use admin
+use nextjs_db
