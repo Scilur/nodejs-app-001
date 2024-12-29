@@ -13,8 +13,6 @@ const getContacts = (req, res) => {
             res.render(createPath('contacts'), { title, contacts });
         })
         .catch((error) => handleError(res, error));
-
-    res.render(createPath('contacts'), { title, contacts });
 };
 
 
