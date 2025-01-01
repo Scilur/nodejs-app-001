@@ -3,28 +3,39 @@ body {
   min-height: calc(100vh - 90px);
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  background: linear-gradient(to bottom, #00d2ff, #928dab);
+  background: cadetblue;
   color: #fff;
 }
 
-h1 {
-  text-transform: uppercase;
+ul {
+  list-style-type: none;
 }
 
-nav {
-  position: absolute;
+/* top menu <*/
+
+nav .nav-container {
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  min-height: 60px;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-nav ul {
-  margin: 0;
+nav .menu-container {
   display: flex;
+}
+
+nav .main-menu {
+  display: flex;
+  justify-content: flex-start;
+}
+
+nav .secondary-menu {
+  min-height: 60px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav a {
@@ -34,12 +45,26 @@ nav a {
   line-height: 60px;
 }
 
-li {
-  list-style: none;
+/* top menu >*/
+
+
+/* login form <*/
+
+.login-form {
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
 }
 
-ul {
-  padding: 0;
+/* login form >*/
+
+
+.form-controll {
+  margin-top: 10px;
+}
+
+h1 {
+  text-transform: uppercase;
 }
 
 a {

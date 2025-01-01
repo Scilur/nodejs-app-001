@@ -5,12 +5,12 @@ const handleError = require('../helpers/handle-error');
 
 const getContacts = (req, res) => {
     const title = "Contacts";
+    const user = req.user;
 
     Contact
         .find()
         .then((contacts) => {
-            console.log(contacts)
-            res.render(createPath('contacts'), { title, contacts });
+            res.render(createPath('contacts'), { user, title, contacts });
         })
         .catch((error) => handleError(res, error));
 };
