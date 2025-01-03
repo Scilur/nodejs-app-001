@@ -11,9 +11,7 @@ function initRequestContext(req, res, next) {
             if (err) {
                 console.log(err);
             } else {
-                req.user = {
-                    email: decoded.email
-                };
+                req.user = decoded.user;
             }
             next();
         });    
