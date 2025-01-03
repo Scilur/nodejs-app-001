@@ -1,5 +1,5 @@
-const Post = require('../models/post');
-const handleError = require('../helpers/api-handle-error');
+import Post from '../models/post.js';
+import handleError from '../helpers/api-handle-error.js';
 
 
 const getPost = (req, res) => {
@@ -43,7 +43,7 @@ const addPost = (req, res) => {
 };
 
 
-module.exports = {
+export {
     getPosts,
     addPost, 
     getPost,

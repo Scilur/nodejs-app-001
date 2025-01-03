@@ -1,6 +1,6 @@
-const Contact = require('../models/contact');
-const createPath = require('../helpers/create-path');
-const handleError = require('../helpers/handle-error');
+import Contact from '../models/contact.js';
+import createPath from '../helpers/create-path.js';
+import handleError from '../helpers/handle-error.js';
 
 
 const getContacts = (req, res) => {
@@ -16,6 +16,6 @@ const getContacts = (req, res) => {
 };
 
 
-module.exports = {
+export {
     getContacts
 };

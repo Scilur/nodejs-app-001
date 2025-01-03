@@ -7,4 +7,4 @@ function authRequest(req, res, next) {
 }
 
 
-module.exports = authRequest;
+export default authRequest;

@@ -1,4 +1,4 @@
-const createPath = require('../helpers/create-path');
+import createPath from '../helpers/create-path.js';
 
 
 const apiHandleError = (res, error) => {
@@ -7,4 +7,4 @@ const apiHandleError = (res, error) => {
 }
 
 
-module.exports = apiHandleError;
+export default apiHandleError;

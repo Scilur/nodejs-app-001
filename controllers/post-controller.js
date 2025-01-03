@@ -1,6 +1,6 @@
-const Post = require('../models/post');
-const createPath = require('../helpers/create-path');
-const handleError = require('../helpers/handle-error');
+import Post from '../models/post.js';
+import createPath from '../helpers/create-path.js';
+import handleError from '../helpers/handle-error.js';
 
 
 const getPosts = (req, res) => {
@@ -77,7 +77,7 @@ const deletePost = (req, res) => {
 };
 
 
-module.exports = {
+export {
     getPosts,
     getPost,
     getEditPost,

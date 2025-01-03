@@ -1,4 +1,4 @@
-const createPath = require('../helpers/create-path');
+import createPath from '../helpers/create-path.js';
 
 
 const handleError = (res, error) => {
@@ -7,4 +7,4 @@ const handleError = (res, error) => {
 }
 
 
-module.exports = handleError;
+export default handleError;
