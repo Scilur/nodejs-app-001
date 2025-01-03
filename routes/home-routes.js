@@ -1,11 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const {
+import express from 'express';
+import {
     getIndex
-} = require('../controllers/home-controller');
+} from '../controllers/home-controller.js';
 
 
+const router = express.Router();
 router.get('/', getIndex);
 
 
-module.exports = router;
+export default router;

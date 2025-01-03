@@ -1,6 +1,6 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/user');
-const handleError = require('../helpers/api-handle-error');
+import jwt from 'jsonwebtoken';
+import User from '../models/user.js';
+import handleError from '../helpers/api-handle-error.js';
 
 
 const doToken = async (req, res) => {
@@ -37,6 +37,6 @@ const doToken = async (req, res) => {
 };
 
 
-module.exports = {
+export {
     doToken,
 }

@@ -1,4 +1,4 @@
-const createPath = require('../helpers/create-path');
+import createPath from '../helpers/create-path.js';
 
 
 const getIndex = (req, res) => {
@@ -20,6 +20,6 @@ const getIndex = (req, res) => {
 };
 
 
-module.exports = {
+export {
     getIndex
 };

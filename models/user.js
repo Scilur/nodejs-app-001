@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const Schema = mongoose.Schema;
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
+const Schema = mongoose.Schema;
 const userSchema = new Schema({
     email: {
         type: String,
@@ -33,4 +33,4 @@ userSchema.methods.comparePassword = async function (password) {
 
 const User = mongoose.model('User', userSchema, "users");
 
-module.exports = User;
+export default User;

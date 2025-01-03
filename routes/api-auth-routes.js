@@ -1,11 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const { 
+import express from 'express'
+import { 
     doToken, 
-} = require('../controllers/api-auth-controller');
+} from '../controllers/api-auth-controller.js';
 
 
+const router = express.Router();
 router.post('/login/token', doToken);
 
 
-module.exports = router;
+export default router;

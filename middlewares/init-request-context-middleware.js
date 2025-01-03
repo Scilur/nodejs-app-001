@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 
 
 function initRequestContext(req, res, next) {
@@ -8,9 +8,7 @@ function initRequestContext(req, res, next) {
 
     if (!!token) {
         jwt.verify(token, process.env.AUTH_JWT_TOKEN_SECRET, (err, decoded) => {
-            if (err) {
-                console.log(err);
-            } else {
+            if (!err) {
                 req.user = decoded.user;
             }
             next();
@@ -21,4 +19,4 @@ function initRequestContext(req, res, next) {
 }
 
 
-module.exports = initRequestContext;
+export default initRequestContext;

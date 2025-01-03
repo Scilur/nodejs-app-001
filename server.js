@@ -1,20 +1,21 @@
-const { name } = require('ejs');
-const express = require('express');
-const morgan = require('morgan');
-const mongoose = require('mongoose');
-const methodOverride = require('method-override');
-const createPath = require('./helpers/create-path');
-const dotenv = require('dotenv');
-const cookieParser = require("cookie-parser");
-const initRequestContext = require('./middlewares/init-request-context-middleware');
+import express from 'express'
 
-const homeRoutes = require('./routes/home-routes');
-const authRoutes = require('./routes/auth-routes');
-const contactRoutes = require('./routes/contact-routes');
-const postRoutes = require('./routes/post-routes');
+import morgan from 'morgan';
+import mongoose from 'mongoose';
+import methodOverride from 'method-override';
+import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 
-const authApiRoutes = require('./routes/api-auth-routes');
-const postApiRoutes = require('./routes/api-post-routes');
+import createPath from './helpers/create-path.js';
+
+import initRequestContext from './middlewares/init-request-context-middleware.js';
+
+import homeRoutes from './routes/home-routes.js';
+import authRoutes from './routes/auth-routes.js';
+import contactRoutes from './routes/contact-routes.js';
+import postRoutes from './routes/post-routes.js';
+import authApiRoutes from './routes/api-auth-routes.js';
+import postApiRoutes from './routes/api-post-routes.js';
 
 
 dotenv.config();

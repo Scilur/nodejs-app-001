@@ -1,7 +1,7 @@
-const User = require('../models/user');
-const jwt = require('jsonwebtoken');
-const createPath = require('../helpers/create-path');
-const handleError = require('../helpers/handle-error');
+import jwt from 'jsonwebtoken';
+import User from '../models/user.js';
+import createPath from '../helpers/create-path.js';
+import handleError from '../helpers/handle-error.js';
 
 
 
@@ -58,7 +58,7 @@ const getUserLogoff = (req, res) => {
 
 
 
-module.exports = {
+export {
     getUserLogin,
     doUserLogin,
     getUserLogoff
